@@ -2,3 +2,5 @@
 .DS_Store
 env
 venv
+__pycache__
+project/config.py
