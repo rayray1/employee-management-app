@@ -20,3 +20,6 @@ Authentication
 Blueprints
 
 Admin user/dashboard
+
+
+(For admin login use: EMAIL-admin@spartan.com, PASSWORD-leonidas)
