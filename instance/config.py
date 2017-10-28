@@ -5,9 +5,5 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 
-# DATABASE = 'spartan.db'
-# USERNAME = 'admin'
-# PASSWORD = 'admin'
-
 SECRET_KEY = 'mysecretkeyhere'
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'database.db')

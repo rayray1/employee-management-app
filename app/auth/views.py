@@ -22,7 +22,7 @@ def register():
         # add employee to db
         db.session.add(employee)
         db.session.commit()
-        flash('You have successfully registered, You may now login.')
+        flash('You have successfully registered.')
 
         # redirect form to login page
         return redirect(url_for('auth.login'))
@@ -42,7 +42,7 @@ def login():
             login_user(employee)
             if employee.is_admin:
                 return redirect(url_for('home.admin_dashboard'))
-            else: 
+            else:
                 return redirect(url_for('home.dashboard'))
         else:
             flash('Invalid email or password.')
@@ -55,5 +55,5 @@ def login():
 @login_required
 def logout():
     logout_user()
-    flash('You have successfully been logged out.')
+    flash('Goodbye!')
     return redirect(url_for('auth.login'))

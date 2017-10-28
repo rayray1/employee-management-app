@@ -7,21 +7,21 @@ from wtforms.ext.sqlalchemy.fields import QuerySelectField
 from ..models import Department, Role
 
 
-# admin form to edit/add a department
+# admin form-edit/add a department
 class DepartmentForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     description = StringField('Description', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 
-# admin form to add/edit a role
+# admin form-add/edit a role
 class RoleForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     description = StringField('Description', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 
-# admin form to assign roles n departments
+# admin form-assign roles n departments
 class EmployeeAssignForm(FlaskForm):
     department = QuerySelectField(query_factory=lambda: Department.query.all(), get_label='name')
     role = QuerySelectField(query_factory=lambda: Role.query.all(), get_label='name')

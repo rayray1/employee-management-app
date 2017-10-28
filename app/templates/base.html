@@ -3,9 +3,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ title }} | The Spartan Group</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SPARTAN CRUD WEB APP">
+    <meta name="RAYMOND RUPIAH" content="SPARTAN CRUD WEB APP">
+    <title>The Spartan Group</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/yeti/bootstrap.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
 </head>
@@ -32,14 +37,14 @@
                     <li><a href="{{ url_for('admin.list_roles') }}">Roles</a></li>
                     <li><a href="{{ url_for('admin.list_employees') }}">Employees</a></li>
                   {% else %}
-                  <li><a href="{{ url_for('home.dashboard') }}">Dashboard</a></li>
+                  <li><a href="{{ url_for('home.dashboard') }}"><i class="fa fa-tachometer"></i> Dashboard</a></li>
                   {% endif %}
-                  <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
-                  <li><a><i class="fa fa-user"></i> Aye, {{ current_user.first_name }}</a></li>
+                  <li><a href="{{ url_for('auth.logout') }}"><i class="fa fa-sign-out"></i> Logout</a></li>
+                  <li><a><i class="fa fa-user"></i> Aye, {{ current_user.first_name }} {{ current_user.last_name }}</a></li>
                 {% else %}
-                  <li><a href="{{ url_for('home.homepage') }}">Home</a></li>
-                  <li><a href="{{ url_for('auth.register') }}">Register</a></li>
-                  <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+                  <li><a href="{{ url_for('home.homepage') }}"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="{{ url_for('auth.register') }}"><i class="fa fa-user-plus"></i> Register</a></li>
+                  <li><a href="{{ url_for('auth.login') }}"><i class="fa fa-sign-in"></i> Login</a></li>
                 {% endif %}
               </ul>
           </div>
@@ -51,18 +56,12 @@
       {% endblock %}
       <div class="push"></div>
     </div>
+
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li><a href="{{ url_for('home.homepage') }}">Home</a></li>
-                        <li class="footer-menu-divider">⋅</li>
-                        <li><a href="{{ url_for('auth.register') }}">Register</a></li>
-                        <li class="footer-menu-divider">⋅</li>
-                        <li><a href="{{ url_for('auth.login') }}">Login</a></li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright © 2017. All Rights Reserved</p>
+                    <p class="copyright text-muted">Copyright © 2017. All Rights Reserved</p>
                 </div>
             </div>
         </div>

@@ -11,20 +11,19 @@ body, h1, h2, h3 {
 }
 
 a, .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
-  color: #aec251;
+  color: #ffffff;
 }
 
-a:hover, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover {
-  color: #687430;
-}
 
 footer {
-    padding: 50px 0;
-    background-color: #f8f8f8;
+    padding: 20px 0;
+    background-color: #0E0F0ECC;
 }
 
 p.copyright {
     margin: 15px 0 0;
+    text-align: right;
+    color: #ffffff;
 }
 
 .alert-info {
@@ -68,7 +67,7 @@ p.copyright {
 
 .intro-header {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 300px;
     text-align: center;
     color: #f8f8f8;
     background: url(../img/spartan.jpg) no-repeat center center;
@@ -99,6 +98,7 @@ p.copyright {
 
 .topnav {
     font-size: 14px;
+    font-weight: 600;
 }
 
 .wrapper {
