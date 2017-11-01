@@ -1,6 +1,10 @@
-﻿A CRUD (Create, Read, Update, Delete) Web App 
+## A CRUD (Create, Read, Update, Delete) Web App
 
-Spartan Employee management web app using Flask - a microframework for Python.
+Spartan Employee Management Web App using Flask - a microframework for Python.
+
+<hr>
+
+Preview the app here - [https://rayray.pythonanywhere.com/]
 
 
 Database setup
@@ -22,4 +26,6 @@ Blueprints
 Admin user/dashboard
 
 
-(For admin login use: EMAIL-admin@spartan.com, PASSWORD-leonidas)
+## For admin login use:
+Email - admin@spartan.com
+Password - leonidas
